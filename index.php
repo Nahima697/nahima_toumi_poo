@@ -6,8 +6,6 @@
         header('Location: index.php?controller=default&action=login');
     }
 
-
-
      if($_GET['controller'] == 'default') {
         $controller = new DefaultController;
         if($_GET['action'] == 'home') {

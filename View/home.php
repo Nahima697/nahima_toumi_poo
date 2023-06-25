@@ -1,6 +1,5 @@
 <?php include ('parts/header.php'); ?>
 
-
 <section class="type mt-6 pb-6 home">
   <div class="container-fluid text-center">
     <h1 class="text-center ">Bienvenue chez Park Moto</h1>

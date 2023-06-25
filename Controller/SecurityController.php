@@ -15,6 +15,7 @@ class SecurityController {
     protected function isLoggedIn() {
      if(!$this->currentUser) {
         header("Location: index.php?controller=security&action=login");
+        die();
      }
      
     }
@@ -38,7 +39,8 @@ class SecurityController {
                 } else {
                     $this->currentUser = $user;
                     $_SESSION['user'] = serialize($user);
-                    header("Location: index.php?controller=motos&action=list");
+                    header("Location: index.php?controller=default&action=home");
+                    die();
                    
                 }
             }
@@ -55,6 +57,7 @@ class SecurityController {
         session_destroy();
         $this->currentUser = null;
         header("Location: index.php?controller=security&action=login");
+        die();
     }
 
     

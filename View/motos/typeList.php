@@ -18,7 +18,7 @@
     </thead>
     <tbody class ="m-3">
         <?php foreach ($motos as $moto) { ?>
-            <tr>0
+            <tr>
                 <th class=" align-middle text-center">
                     <?php echo $moto->getId() ?>
                 </th>

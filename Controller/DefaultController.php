@@ -1,13 +1,14 @@
 <?php 
-class DefaultController  {
-    private $motomanager;
+class DefaultController extends SecurityController {
+   
+  
     public function __construct() {
-    $this->motomanager = new MotoManager;
-     
+          parent :: __construct();
+
     }
+  
     public function home() {
-        
-        require('View/home.php');
+     require('View/home.php');
     }
 
     public function notFound() {
