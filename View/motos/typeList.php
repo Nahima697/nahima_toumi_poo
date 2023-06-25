@@ -1,6 +1,6 @@
 <?php include('View/parts/header.php'); ?>
 <div class="container">
-<h1 class = "text-center" >Liste des motos de type <?php echo $type?></h1>
+<h1 class = "text-center" >Liste des motos de type</h1>
 <div class="d-flex justify-content-space-evenly">
 
 <br>
@@ -18,7 +18,7 @@
     </thead>
     <tbody class ="m-3">
         <?php foreach ($motos as $moto) { ?>
-            <tr>
+            <tr>0
                 <th class=" align-middle text-center">
                     <?php echo $moto->getId() ?>
                 </th>
