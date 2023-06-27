@@ -31,7 +31,6 @@
         }
     
         public function displayOne($id) {
-            $this->isLoggedIn();
             $motomanager= $this->motomanager; 
             $moto = $motomanager->selectOne($id);
             if(empty($moto)) {
@@ -49,9 +48,7 @@
             }
             require('View/motos/typeList.php');
         }
-        
-        
-        
+            
         public function ajout(){
             $this->isLoggedIn();
             $errors = [];
@@ -109,10 +106,12 @@
             $errors = [];
             if (empty($moto)) {
                 header("Location: index.php?controller=default&action=not-found"); 
+                exit();
             } else {
                     unlink("uploads/".$moto->getImage());
                     $this->motomanager->delete($moto->getId());
                     header("Location: index.php?controller=motos&action=list"); 
+                    exit();
                 }
 
         }

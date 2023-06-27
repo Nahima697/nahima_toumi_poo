@@ -31,7 +31,9 @@
                     'uploads/'.$moto->getImage())?>" width="250" height="150">
                 </td>
                 <td class="col-description align-middle text-center"><?php echo $moto->getType() ?></td>
-                
+                </td>
+                <td class="align-middle text-center">
+                    <a href="index.php?controller=motos&action=detail&id=<?php echo $moto->getId() ?>" class="btn btn-primary">Détails</a>
                 </td>
             </tr>
         <?php } ?>
